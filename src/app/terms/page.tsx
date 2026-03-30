@@ -9,7 +9,7 @@ export default function Regulamin() {
             Regulamin Serwisu
           </h1>
           <p className="text-zinc-600 font-mono text-[10px] uppercase tracking-widest">
-            ILEZATO.PL // WARUNKI KORZYSTANIA
+            ILEZATODAM.PL // WARUNKI KORZYSTANIA
           </p>
         </header>
         <div className="space-y-10 text-sm leading-relaxed border-t border-zinc-900 pt-10">
@@ -18,7 +18,7 @@ export default function Regulamin() {
               <span className="text-zinc-700">01.</span> Postanowienia Ogólne
             </h2>
             <p>
-              Niniejszy regulamin określa zasady korzystania z serwisu rozrywkowego „ILE ZA TO?” dostępnego pod adresem ilezato.pl. 
+              Niniejszy regulamin określa zasady korzystania z serwisu rozrywkowego „ILE ZA TO DAM?” dostępnego pod adresem ilezatodam.pl. 
               Serwis ma charakter gry logicznej polegającej na odgadywaniu cen produktów. Korzystanie z serwisu jest bezpłatne i nie wymaga rejestracji konta.
             </p>
           </section>
@@ -38,7 +38,7 @@ export default function Regulamin() {
             </h2>
             <p>
               Dane o produktach (tytuły, wizerunki produktów, ceny) są własnością serwisu <strong>Allegro</strong> lub sprzedawców tam ogłaszających. 
-              Serwis „ILE ZA TO?” wykorzystuje te dane wyłącznie w celach informacyjno-rozrywkowych. 
+              Serwis „ILE ZA TO DAM?” wykorzystuje te dane wyłącznie w celach informacyjno-rozrywkowych. 
               Kod źródłowy oraz oprawa graficzna serwisu stanowią własność Administratora i są chronione prawem autorskim.
             </p>
           </section>
@@ -60,7 +60,7 @@ export default function Regulamin() {
                 <span className="text-zinc-700">05.</span> Wsparcie Serwisu
             </h2>
             <p>
-                Użytkownik ma możliwość dobrowolnego wsparcia Serwisu poprzez platformy typu „Buy Me a Coffee”. 
+                Użytkownik ma możliwość dobrowolnego wsparcia Serwisu poprzez platforme  „buycoffee.to”. 
             </p>
             <ul className="list-disc pl-5 mt-2 space-y-1 text-zinc-500">
                 <li>Wszelkie wpłaty są całkowicie dobrowolne i nie są warunkiem dostępu do gry.</li>

@@ -9,7 +9,7 @@ export default function PolitykaPrywatnosci() {
             Polityka Prywatności
           </h1>
           <p className="text-zinc-600 font-mono text-[10px] uppercase tracking-widest">
-            Serwis: ILE ZA TO? // Ostatnia aktualizacja: 30.03.2026
+            Serwis: ILE ZA TO DAM? // Ostatnia aktualizacja: 30.03.2026
           </p>
         </header>
         <div className="space-y-10 text-sm leading-relaxed border-t border-zinc-900 pt-10">
@@ -18,9 +18,9 @@ export default function PolitykaPrywatnosci() {
               <span className="text-zinc-700">01.</span> Administrator Danych
             </h2>
             <p>
-              Administratorem serwisu ilezato.pl jest osoba fizyczna nieprowadząca działalności gospodarczej. 
+              Administratorem serwisu ilezatodam.pl jest osoba fizyczna nieprowadząca działalności gospodarczej. 
               W sprawach związanych z działaniem serwisu oraz prywatnością możesz skontaktować się pod adresem: 
-              <span className="text-zinc-200 ml-1 underline">[ilezato@gmail.com]</span>.
+              <span className="text-zinc-200 ml-1 underline">[kontakt.ilezato@gmail.com]</span>.
             </p>
           </section>
           <section>
@@ -68,7 +68,7 @@ export default function PolitykaPrywatnosci() {
               Zgodnie z RODO, masz prawo do usunięcia swoich danych. W przypadku naszej strony możesz to zrobić samodzielnie w dowolnym momencie poprzez:
             </p>
             <div className="mt-3 p-4 bg-zinc-950 border border-zinc-900 rounded-lg font-mono text-[11px] text-zinc-500">
-              Ustawienia Przeglądarki {'>'} Prywatność {'>'} Zarządzaj danymi witryn {'>'} Usuń dane dla domeny ilezato.pl
+              Ustawienia Przeglądarki {'>'} Prywatność {'>'} Zarządzaj danymi witryn {'>'} Usuń dane dla domeny ilezatodam.pl
             </div>
           </section>
         </div>

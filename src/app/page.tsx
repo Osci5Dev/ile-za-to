@@ -178,7 +178,7 @@ export default function Home() {
       
       <div className="absolute top-4 left-4 z-50 hidden sm:block">
         <a 
-          href="https://www.buymeacoffee.com/TWOJA_NAZWA" 
+          href="https://www.buymeacoffee.com/ilezato" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group flex items-center gap-2 px-3 py-2 border border-zinc-900 bg-zinc-950 rounded-xl hover:border-zinc-700 transition-all active:scale-95 shadow-2xl"
@@ -193,7 +193,7 @@ export default function Home() {
       <nav className="w-full max-w-md flex justify-between items-center mb-2 pt-1 border-b border-zinc-900 pb-2">
         <div className="flex items-center gap-3 font-black tracking-tighter text-white">
           <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-black font-black text-sm shadow-[0_0_15px_rgba(255,255,255,0.3)]">?</div>
-          <span className="text-[18px]">ILE ZA TO?</span>
+          <span className="text-[18px]">ILE ZA TO DAM?</span>
         </div>
         <div className="flex items-center gap-2 bg-zinc-900 px-4 py-1 rounded-full border border-zinc-800">
           <span className="text-orange-500 text-[18px]">🔥</span>
