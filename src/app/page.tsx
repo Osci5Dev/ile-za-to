@@ -31,13 +31,15 @@ export default function Home() {
     if (savedStats) setStats(JSON.parse(savedStats));
   };
 
+  // --- POPRAWKA 1: Naprawa naliczania streaka ---
   const updateStats = (won: boolean) => {
     const savedStats = localStorage.getItem('game_stats');
     let currentStats = savedStats ? JSON.parse(savedStats) : { streak: 0, wins: 0, total: 0, lastWin: "" };
+    
     const today = new Date().toLocaleDateString('en-CA');
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
-    const yesterdayStr = yesterday.toISOString().split('T')[0];
+    const yesterdayStr = yesterday.toLocaleDateString('en-CA'); // Zmieniono z ISO na en-CA
 
     currentStats.total += 1;
     if (won) {
@@ -52,8 +54,11 @@ export default function Home() {
     setStats(currentStats);
   };
 
+  // --- POPRAWKA 2: Przesyłanie daty do Supabase ---
   const initGame = async () => {
     const isTestMode = sessionStorage.getItem('test_shuffle') === 'true';
+    const today = new Date().toLocaleDateString('en-CA'); // Pobieramy datę na początku
+    
     let response;
     if (isTestMode) {
       const { data } = await supabase.from('items').select('*').limit(100);
@@ -63,7 +68,8 @@ export default function Home() {
       }
       sessionStorage.removeItem('test_shuffle');
     } else {
-      response = await supabase.rpc('get_daily_item');
+      // Przesyłamy parametr p_date do Twojej funkcji SQL
+      response = await supabase.rpc('get_daily_item', { p_date: today });
     }
 
     if (response?.data && response.data[0]) {
@@ -80,7 +86,6 @@ export default function Home() {
       setItem(dailyItem);
       setRange({ min: minV, max: maxV });
       
-      const today = new Date().toLocaleDateString('en-CA');
       const saved = localStorage.getItem(`game_${today}`);
       if (saved && !isTestMode) {
         const p = JSON.parse(saved);
@@ -346,7 +351,7 @@ export default function Home() {
         
         <div className="text-zinc-800 tracking-[0.2em] uppercase text-center pb-2">
           Dane o produktach pochodzą z serwisu <span className="text-zinc-700">Allegro.pl</span>
-          <p className="text-[7px] font-black text-zinc-700 uppercase tracking-widest">Najbliższa data zbierania danych: 30.03.2026 </p>
+          <p className="text-[7px] font-black text-zinc-700 uppercase tracking-widest">Ostatnia synchronizacja danych: 30.03.2026 </p>
         </div>
       </footer>
 
