@@ -34,7 +34,7 @@ export default function Home() {
   const updateStats = (won: boolean) => {
     const savedStats = localStorage.getItem('game_stats');
     let currentStats = savedStats ? JSON.parse(savedStats) : { streak: 0, wins: 0, total: 0, lastWin: "" };
-    const today = new Date().toISOString().split('T')[0];
+    const today = new Date().toLocaleDateString('en-CA');
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
     const yesterdayStr = yesterday.toISOString().split('T')[0];
@@ -80,7 +80,7 @@ export default function Home() {
       setItem(dailyItem);
       setRange({ min: minV, max: maxV });
       
-      const today = new Date().toISOString().split('T')[0];
+      const today = new Date().toLocaleDateString('en-CA');
       const saved = localStorage.getItem(`game_${today}`);
       if (saved && !isTestMode) {
         const p = JSON.parse(saved);
@@ -167,7 +167,7 @@ export default function Home() {
       updateStats(false);
     }
 
-    const today = new Date().toISOString().split('T')[0];
+    const today = new Date().toLocaleDateString('en-CA');
     localStorage.setItem(`game_${today}`, JSON.stringify({ attempts: newAttempts, state: isWin ? 'won' : isGameOver ? 'lost' : 'playing' }));
   };
 
