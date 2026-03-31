@@ -75,7 +75,7 @@ export default function Regulamin() {
             <p>
               Administrator zastrzega sobie prawo do zmiany niniejszego regulaminu w dowolnym momencie. 
               Dalsze korzystanie z serwisu po wprowadzeniu zmian oznacza ich akceptację. 
-              Wszelkie uwagi dotyczące działania strony należy kierować na adres: <strong>[kontakt.ilezato@gmail.com]</strong>.
+              Wszelkie uwagi dotyczące działania strony należy kierować na adres: <strong>kontakt.ilezato@gmail.com</strong>.
             </p>
           </section>
         </div>
