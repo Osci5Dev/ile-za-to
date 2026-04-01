@@ -406,28 +406,60 @@ export default function Home() {
         </div>
       )}
 
-      {isTutorialOpen && (
+{isTutorialOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4 overflow-y-auto">
-          <div className="bg-[#050505] border border-zinc-800 rounded-2xl p-6 w-full max-w-sm relative animate-in zoom-in-95 my-8">
-            <button onClick={() => setIsTutorialOpen(false)} className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center text-zinc-500 hover:text-white bg-zinc-900 rounded-full font-black">✕</button>
-            <h2 className="text-xl font-black text-white uppercase tracking-widest mb-4 flex items-center gap-2"><span>🎓</span> Jak grać?</h2>
-            <div className="space-y-5 text-xs text-zinc-400">
+          <div className="bg-[#050505] border border-zinc-800 rounded-2xl p-6 w-full max-w-sm relative shadow-2xl animate-in zoom-in-95 duration-200 my-8">
+            <button 
+              onClick={() => setIsTutorialOpen(false)}
+              className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center text-zinc-500 hover:text-white bg-zinc-900 rounded-full transition-colors font-black"
+            >
+              ✕
+            </button>
+            
+            <h2 className="text-xl font-black text-white uppercase tracking-widest mb-4 flex items-center gap-2">
+              <span>🎓</span> Jak grać?
+            </h2>
+            
+            <div className="space-y-5 text-xs text-zinc-400 tracking-tight leading-relaxed">
               <section>
-                <h3 className="text-white font-bold uppercase text-[10px] mb-1">Cel gry</h3>
-                <p>Odgadnij cenę produktu w 6 próbach.</p>
+                <h3 className="text-white font-bold uppercase tracking-widest text-[10px] mb-1">Cel gry</h3>
+                <p>Twoim zadaniem jest odgadnięcie dokładnej ceny produktu. Masz na to 6 prób!</p>
               </section>
+
               <section>
-                <h3 className="text-white font-bold uppercase text-[10px] mb-1">Wskaźniki</h3>
+                <h3 className="text-white font-bold uppercase tracking-widesttext-[10px] mb-1">Podpowiedzi</h3>
+                <p>Przyciski pod tytułem odblokowują się, gdy osiągniesz wskazaną liczbę nieudanych prób (2, 3, 4). Kliknij je, aby ułatwić sobie zadanie!</p>
+              </section>
+
+              <section>
+                <h3 className="text-white font-bold uppercase tracking-widest text-[10px] mb-2">Wskaźniki (Kolory i Emotki)</h3>
                 <div className="space-y-2">
-                  <div className="flex items-center gap-3 bg-red-600/15 border border-red-600/40 p-2 rounded-lg">
-                    <span className="text-lg">🔥🔥🔥</span>
-                    <span className="text-[10px] font-black uppercase text-red-300">Parzy! (&lt; 2.5% błędu)</span>
+                  <div className="flex items-center gap-3 bg-green-500/10 border border-green-500/30 p-2.5 rounded-lg">
+                    <span className="text-lg flex-shrink-0 whitespace-nowrap text-center leading-none">🎯</span>
+                    <span className="text-[10px] font-black uppercase text-green-400">Idealnie (Dokładna cena)</span>
                   </div>
-                  <div className="flex items-center gap-3 bg-blue-950/40 border border-blue-900/50 p-2 rounded-lg">
-                    <span className="text-lg">❄️</span>
-                    <span className="text-[10px] font-black uppercase text-blue-300">Zimno (&gt; 15% błędu)</span>
+                  <div className="flex items-center gap-3 bg-red-600/15 border border-red-600/40 p-2.5 rounded-lg">
+                    <span className="text-lg flex-shrink-0 whitespace-nowrap text-center leading-none drop-shadow-md">🔥🔥🔥</span>
+                    <span className="text-[10px] font-black uppercase text-red-300 whitespace-nowrap">Parzy! (Pomyłka &lt; 2.5%)</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-red-500/10 border border-red-500/30 p-2.5 rounded-lg">
+                    <span className="text-lg flex-shrink-0 whitespace-nowrap text-center leading-none">🔥🔥</span>
+                    <span className="text-[10px] font-black uppercase text-red-400">Gorąco (Pomyłka &lt; 5%)</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-orange-500/10 border border-orange-500/30 p-2.5 rounded-lg">
+                    <span className="text-lg flex-shrink-0 whitespace-nowrap text-center leading-none">🔥</span>
+                    <span className="text-[10px] font-black uppercase text-orange-400 whitespace-nowrap">Ciepło (Pomyłka &lt; 15%)</span>
+                  </div>
+                  <div className="flex items-center gap-3 bg-blue-950/40 border border-blue-900/50 p-2.5 rounded-lg">
+                    <span className="text-lg flex-shrink-0 whitespace-nowrap text-center leading-none">❄️</span>
+                    <span className="text-[10px] font-black uppercase text-blue-300 whitespace-nowrap">Zimno (Pomyłka &gt; 15%)</span>
                   </div>
                 </div>
+              </section>
+              
+              <section>
+                 <h3 className="text-white font-bold uppercase tracking-widest text-[10px] mb-1 whitespace-nowrap">Strzałki kierunkowe</h3>
+                 <p>W historii prób zobaczysz strzałki: <span className="text-blue-400 font-bold bg-blue-900/30 px-1 rounded whitespace-nowrap">↑ Za mało</span> lub <span className="text-red-400 font-bold bg-red-900/30 px-1 rounded whitespace-nowrap">↓ Za dużo</span>, które pomagają naprowadzić Cię na kwotę.</p>
               </section>
             </div>
           </div>
